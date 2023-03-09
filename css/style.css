@@ -1,0 +1,230 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+html,
+body {
+    overflow: overlay;
+    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #000000;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 145px 0 140.5px;
+}
+.wrapper__main {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 107px 0 140.5px;
+}
+.black-layer {
+    display: none;
+}
+.hamb {
+    display: flex;
+    align-items: center;
+}
+.hamb__field {
+    padding: 3px 0;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 40px;
+    border: 1px solid #717171;
+    margin: 6px auto;
+    transition: 0.5s;
+}
+.popup {
+    position: fixed;
+    top: 20px;
+    left: -100%;
+    width: 300px;
+    height: 250px;
+    background-color: white;
+    z-index: 100;
+    display: flex;
+    transition: 1s;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+.popup.open {
+    left: 0;
+}
+.nav__list {
+    display: none;
+}
+.popup .nav__list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 18px 0;
+    overflow: auto;
+    gap: 10px;
+}
+.popup .nav__list > li {
+    width: 100%;
+}
+.popup .nav__list > li > a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    font-size: 20px;
+}
+.popup .nav__list > li > a:hover {
+    color: #E06733;
+}    
+.hamb__field.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamb__field.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamb__field.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+.black-layer_active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.2);
+    transition: 1s;
+}
+.header__content{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+.header__link {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
+/* main */
+.main{
+    display: flex;
+    /* flex-wrap: wrap;
+    flex-direction: column; */
+    max-width: 1194.5px;
+}
+.main__content {
+    max-width: 570px;
+    margin-top: 278px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    
+    
+}
+.main__title {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 59px;
+    margin: 0;
+}
+.main__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+.main__btn {
+    border: 0;
+    width: 260px;
+    height: 60px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 30px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.slider {
+    margin-top: 166px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 30px;
+}
+.slider__container {
+    width: 494px;
+    height: 523px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 150px;
+    overflow: hidden;
+    position: relative;
+
+}
+.slider__container_background {
+    object-fit: cover;
+    width: 494px;
+    height: 523px;
+    z-index: -1;
+    position: absolute;
+}
+/* .slider__content{
+    width: 1400px;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+} */
+.slider__item {
+    position: absolute;
+    top: 13px;
+    left: 40px;
+    object-fit: cover;
+    width: 395px;
+    height: 340px;
+    opacity: 0;
+    transition: transform 1s ease-in-out;
+    transform: translate(50%, 50%) rotate(0deg);
+}
+.slider__arrow {
+    display: flex;
+    justify-content: space-between;
+    width: 128px;
+    margin-right: 147px;
+}
+.slider__arrow button {
+background: none;
+border: 0;
+}
+
+
+
+  
+.slider__item.active {
+    z-index: 1;
+    transform: translate(4%,20%) rotate(360deg);
+    opacity: 1;
+    transition: transform 1s ease-in-out;
+    
+  }
+  
