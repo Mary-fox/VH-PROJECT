@@ -98,6 +98,7 @@ body {
     transform-origin: top left;
     transform: rotate(-12deg);
     color: #764BA2;
+    transition: all 0.3s;
 }
 .popup .nav__list > li:nth-child(5) > a:hover {
     transform-origin: top left;
@@ -107,7 +108,7 @@ body {
 .popup .nav__list > li > p {
     position: absolute;
     top: 14px;
-    left: 65px;
+    left: 50px;
     opacity: 0;
     font-weight: 400;
     font-size: 11.5862px;
@@ -115,6 +116,8 @@ body {
 } 
 .popup .nav__list > li > a:hover + p {
     opacity: 1;
+    transform: translateX(15px);
+    transition: all 0.5s ease-in-out;
 }
 
 .popup .nav__list > li:nth-child(4) {
@@ -225,7 +228,7 @@ body {
     width: 395px;
     height: 340px;
     opacity: 0;
-    transition: transform 1s ease-in-out;
+    transition: all 1s ease-in-out;
     transform: translate(150%, -150%) rotate(0deg);
 }
 .slider__arrow {
@@ -243,7 +246,7 @@ body {
     z-index: 1;
     transform: translate(4%,20%) rotate(360deg);
     opacity: 1;
-    transition: transform 1s ease-in-out;
+    transition: all 1s ease-in-out;
     
   }
 .slider__item.prew {
