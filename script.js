@@ -1,7 +1,7 @@
 //slider
 
-const prevBtn = document.querySelector(".slider__arrow_prew");
-const nextBtn = document.querySelector(".slider__arrow_next");
+const prevBtn = document.querySelector(".slider__prew");
+const nextBtn = document.querySelector(".slider__next");
 const slides = document.querySelectorAll(".slider__item");
 let currentIndex = 0;
 
